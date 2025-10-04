@@ -1,0 +1,9 @@
+services:
+  web-terminal:
+    build: .
+    container_name: web-ubuntu-shell
+    ports:
+      - "4200:4200"
+    environment:
+      - SHELLINABOX_PORT=4200
+    restart: unless-stopped
